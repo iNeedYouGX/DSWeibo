@@ -17,6 +17,7 @@
 		C8BA2EFD25064DF100E3FEC6 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA2EF625064DF100E3FEC6 /* MessageTableViewController.swift */; };
 		C8BA2EFE25064DF100E3FEC6 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA2EF825064DF100E3FEC6 /* ProfileTableViewController.swift */; };
 		C8BA2EFF25064DF100E3FEC6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA2EFA25064DF100E3FEC6 /* MainViewController.swift */; };
+		C8CBA4CF2508A578002384F3 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C8CBA4CE2508A578002384F3 /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C8BA2EF625064DF100E3FEC6 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		C8BA2EF825064DF100E3FEC6 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		C8BA2EFA25064DF100E3FEC6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C8CBA4CE2508A578002384F3 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +135,12 @@
 		C8BA2EEF25064DF100E3FEC6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C8BA2EF025064DF100E3FEC6 /* Home */,
-				C8BA2EF225064DF100E3FEC6 /* Tools */,
-				C8BA2EF325064DF100E3FEC6 /* Discover */,
-				C8BA2EF525064DF100E3FEC6 /* Message */,
-				C8BA2EF725064DF100E3FEC6 /* Profile */,
 				C8BA2EF925064DF100E3FEC6 /* Main */,
+				C8BA2EF025064DF100E3FEC6 /* Home */,
+				C8BA2EF525064DF100E3FEC6 /* Message */,
+				C8BA2EF325064DF100E3FEC6 /* Discover */,
+				C8BA2EF725064DF100E3FEC6 /* Profile */,
+				C8BA2EF225064DF100E3FEC6 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 		C8BA2EF925064DF100E3FEC6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C8CBA4CE2508A578002384F3 /* MainVCSettings.json */,
 				C8BA2EFA25064DF100E3FEC6 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -296,6 +299,7 @@
 			files = (
 				C8BA2ECC25064AA500E3FEC6 /* LaunchScreen.storyboard in Resources */,
 				C8BA2EC925064AA500E3FEC6 /* Assets.xcassets in Resources */,
+				C8CBA4CF2508A578002384F3 /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

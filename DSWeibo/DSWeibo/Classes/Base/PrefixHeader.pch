@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  DSWeibo
+//
+//  Created by JsonBourne on 2020/9/14.
+//  Copyright © 2020 JsonBourne. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define SCR_WIDTH UIScreen.main.bounds.size.width
+#define SCR_HEIGHT UIScreen.main.bounds.size.height
+
+#endif /* PrefixHeader_pch */

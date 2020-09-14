@@ -18,6 +18,11 @@
 		C8BA2EFE25064DF100E3FEC6 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA2EF825064DF100E3FEC6 /* ProfileTableViewController.swift */; };
 		C8BA2EFF25064DF100E3FEC6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA2EFA25064DF100E3FEC6 /* MainViewController.swift */; };
 		C8CBA4CF2508A578002384F3 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C8CBA4CE2508A578002384F3 /* MainVCSettings.json */; };
+		C8CBA4D12508B711002384F3 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CBA4D02508B711002384F3 /* NullViewController.swift */; };
+		C8CBA5472508FE03002384F3 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CBA5462508FE03002384F3 /* BaseTableViewController.swift */; };
+		C8CBA5492508FFE2002384F3 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CBA5482508FFE2002384F3 /* VisitorView.swift */; };
+		C8F0CA06250F776C00F0E9FB /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0CA05250F776C00F0E9FB /* UIBarButtonItem+Category.swift */; };
+		C8F0CA08250F81E300F0E9FB /* TitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0CA07250F81E300F0E9FB /* TitleBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,12 @@
 		C8BA2EF825064DF100E3FEC6 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		C8BA2EFA25064DF100E3FEC6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C8CBA4CE2508A578002384F3 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		C8CBA4D02508B711002384F3 /* NullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		C8CBA5462508FE03002384F3 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		C8CBA5482508FFE2002384F3 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		C8E00AD6250E814E00EC07A7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C8F0CA05250F776C00F0E9FB /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
+		C8F0CA07250F81E300F0E9FB /* TitleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +146,8 @@
 		C8BA2EEF25064DF100E3FEC6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C8F0CA00250F769400F0E9FB /* Common */,
+				C8E00AD5250E73A500EC07A7 /* Base */,
 				C8BA2EF925064DF100E3FEC6 /* Main */,
 				C8BA2EF025064DF100E3FEC6 /* Home */,
 				C8BA2EF525064DF100E3FEC6 /* Message */,
@@ -189,8 +202,28 @@
 			children = (
 				C8CBA4CE2508A578002384F3 /* MainVCSettings.json */,
 				C8BA2EFA25064DF100E3FEC6 /* MainViewController.swift */,
+				C8CBA4D02508B711002384F3 /* NullViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C8E00AD5250E73A500EC07A7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C8CBA5462508FE03002384F3 /* BaseTableViewController.swift */,
+				C8CBA5482508FFE2002384F3 /* VisitorView.swift */,
+				C8E00AD6250E814E00EC07A7 /* PrefixHeader.pch */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C8F0CA00250F769400F0E9FB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C8F0CA05250F776C00F0E9FB /* UIBarButtonItem+Category.swift */,
+				C8F0CA07250F81E300F0E9FB /* TitleBtn.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +294,7 @@
 				TargetAttributes = {
 					C8BA2EBB25064AA300E3FEC6 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					C8BA2ED125064AA500E3FEC6 = {
 						CreatedOnToolsVersion = 11.6;
@@ -326,10 +360,15 @@
 			files = (
 				C8BA2EFF25064DF100E3FEC6 /* MainViewController.swift in Sources */,
 				C8BA2EFE25064DF100E3FEC6 /* ProfileTableViewController.swift in Sources */,
+				C8F0CA08250F81E300F0E9FB /* TitleBtn.swift in Sources */,
+				C8CBA5472508FE03002384F3 /* BaseTableViewController.swift in Sources */,
 				C8BA2EFB25064DF100E3FEC6 /* HomeTableViewController.swift in Sources */,
 				C8BA2EFD25064DF100E3FEC6 /* MessageTableViewController.swift in Sources */,
 				C8BA2EFC25064DF100E3FEC6 /* DiscoverTableViewController.swift in Sources */,
+				C8CBA5492508FFE2002384F3 /* VisitorView.swift in Sources */,
 				C8BA2EC025064AA300E3FEC6 /* AppDelegate.swift in Sources */,
+				C8F0CA06250F776C00F0E9FB /* UIBarButtonItem+Category.swift in Sources */,
+				C8CBA4D12508B711002384F3 /* NullViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,9 +533,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G583M5JELZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gxl/Desktop/DSWeibo/DSWeibo/DSWeibo/Classes/Base/PrefixHeader.pch;
 				INFOPLIST_FILE = DSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,6 +548,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.testtest.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = GXTEXTProvisioning;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -515,9 +559,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G583M5JELZ;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gxl/Desktop/DSWeibo/DSWeibo/DSWeibo/Classes/Base/PrefixHeader.pch;
 				INFOPLIST_FILE = DSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,6 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.testtest.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = GXTEXTProvisioning;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

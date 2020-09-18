@@ -21,8 +21,6 @@ class HomeTableViewController: BaseTableViewController {
         
         // 如果登陆了, 设置登陆之后的逻辑
         setUpNavgation();
-        
-
     }
     
     private func setUpNavgation() {
@@ -36,7 +34,6 @@ class HomeTableViewController: BaseTableViewController {
         let titleBtn:TitleBtn = TitleBtn()
         titleBtn.addTarget(self, action: #selector(titleBtnClick), for: UIControl.Event.touchUpInside)
         navigationItem.titleView = titleBtn;
-        
     }
     
     @objc func leftItemClick()
@@ -52,7 +49,25 @@ class HomeTableViewController: BaseTableViewController {
     @objc func titleBtnClick(btn: UIButton)
     {
         btn.isSelected = !btn.isSelected;
-        print(#function);
+       
+        let sb = UIStoryboard(name: "PopoverViewController", bundle: nil);
+        let popVc = sb.instantiateInitialViewController();
+        
+        // 用代理来改变模态形式
+        popVc?.modalPresentationStyle = UIModalPresentationStyle.custom;
+        popVc?.transitioningDelegate = self;
+        
+        present(popVc!, animated: true) {}
+        print(popVc as Any);
+    }
+    
+}
+
+// MARK: - 利用代理来自定义弹出形式
+extension HomeTableViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
+    {
+        return PopoverPresentationController(presentedViewController: presented, presenting: presenting)
     }
     
 }

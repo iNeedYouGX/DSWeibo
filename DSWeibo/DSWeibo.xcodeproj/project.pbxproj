@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83C87202511C7A500B1A033 /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83C871F2511C7A500B1A033 /* PopoverViewController.storyboard */; };
+		C83C87222511CA4C00B1A033 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83C87212511CA4C00B1A033 /* PopoverViewController.swift */; };
+		C83C87242511DBE900B1A033 /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83C87232511DBE900B1A033 /* PopoverPresentationController.swift */; };
 		C8BA2EC025064AA300E3FEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA2EBF25064AA300E3FEC6 /* AppDelegate.swift */; };
 		C8BA2EC925064AA500E3FEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BA2EC825064AA500E3FEC6 /* Assets.xcassets */; };
 		C8BA2ECC25064AA500E3FEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BA2ECA25064AA500E3FEC6 /* LaunchScreen.storyboard */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C83C871F2511C7A500B1A033 /* PopoverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
+		C83C87212511CA4C00B1A033 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		C83C87232511DBE900B1A033 /* PopoverPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentationController.swift; sourceTree = "<group>"; };
 		C8BA2EBC25064AA300E3FEC6 /* DSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BA2EBF25064AA300E3FEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8BA2EC825064AA500E3FEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C83C871E2511C75100B1A033 /* 弹框 */ = {
+			isa = PBXGroup;
+			children = (
+				C83C871F2511C7A500B1A033 /* PopoverViewController.storyboard */,
+				C83C87212511CA4C00B1A033 /* PopoverViewController.swift */,
+				C83C87232511DBE900B1A033 /* PopoverPresentationController.swift */,
+			);
+			path = "弹框";
+			sourceTree = "<group>";
+		};
 		C8BA2EB325064AA300E3FEC6 = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				C8F0CA00250F769400F0E9FB /* Common */,
-				C8E00AD5250E73A500EC07A7 /* Base */,
 				C8BA2EF925064DF100E3FEC6 /* Main */,
+				C8E00AD5250E73A500EC07A7 /* Base */,
 				C8BA2EF025064DF100E3FEC6 /* Home */,
 				C8BA2EF525064DF100E3FEC6 /* Message */,
 				C8BA2EF325064DF100E3FEC6 /* Discover */,
@@ -161,6 +177,7 @@
 		C8BA2EF025064DF100E3FEC6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C83C871E2511C75100B1A033 /* 弹框 */,
 				C8BA2EF125064DF100E3FEC6 /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -333,6 +350,7 @@
 			files = (
 				C8BA2ECC25064AA500E3FEC6 /* LaunchScreen.storyboard in Resources */,
 				C8BA2EC925064AA500E3FEC6 /* Assets.xcassets in Resources */,
+				C83C87202511C7A500B1A033 /* PopoverViewController.storyboard in Resources */,
 				C8CBA4CF2508A578002384F3 /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,10 +376,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83C87242511DBE900B1A033 /* PopoverPresentationController.swift in Sources */,
 				C8BA2EFF25064DF100E3FEC6 /* MainViewController.swift in Sources */,
 				C8BA2EFE25064DF100E3FEC6 /* ProfileTableViewController.swift in Sources */,
 				C8F0CA08250F81E300F0E9FB /* TitleBtn.swift in Sources */,
 				C8CBA5472508FE03002384F3 /* BaseTableViewController.swift in Sources */,
+				C83C87222511CA4C00B1A033 /* PopoverViewController.swift in Sources */,
 				C8BA2EFB25064DF100E3FEC6 /* HomeTableViewController.swift in Sources */,
 				C8BA2EFD25064DF100E3FEC6 /* MessageTableViewController.swift in Sources */,
 				C8BA2EFC25064DF100E3FEC6 /* DiscoverTableViewController.swift in Sources */,

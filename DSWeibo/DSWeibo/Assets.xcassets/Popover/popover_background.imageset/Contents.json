@@ -7,6 +7,17 @@
     {
       "filename" : "popover_background@2x.png",
       "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 49,
+          "top" : 48
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "stretch"
+        },
+        "mode" : "3-part-vertical"
+      },
       "scale" : "2x"
     },
     {

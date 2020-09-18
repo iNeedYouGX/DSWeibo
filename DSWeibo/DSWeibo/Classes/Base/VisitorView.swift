@@ -17,8 +17,6 @@ protocol VisitorViewDelegate {
 }
 
 class VisitorView: UIView {
-    
-    
     // 2设置代理人
     var delegate: VisitorViewDelegate?;
     
@@ -35,9 +33,7 @@ class VisitorView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame);
-        
-        backgroundColor = UIColor.green;
-        
+        backgroundColor = UIColor.white;
         addSubview(iconImageView);
         addSubview(homeIcon);
         addSubview(messageLabel);

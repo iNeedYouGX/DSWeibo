@@ -9,26 +9,18 @@
 import UIKit
 
 class BaseTableViewController: UITableViewController, VisitorViewDelegate {
-    // MARK: - 实现代理方法
-    @objc func loginWillClicked() {
-        print(#function);
-    }
-    
-    @objc func registerWillClicked() {
-        print(#function);
-    }
-    
-    
+    // 记录用户的登陆情况
     let userLogin = true;
+    
     var visitorView: VisitorView?;
     
     override func loadView() {
+        // 没有登陆时候加载自定义的View
         userLogin ? super.loadView() : setupVisitor();
-        
     }
     
     func setupVisitor() {
-        let custom = VisitorView();
+        let custom = VisitorView.init();
         custom.delegate = self;
         view = custom;
         visitorView = custom;
@@ -41,7 +33,17 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-   
-
+    
+    // MARK: - 实现代理方法
+    @objc func loginWillClicked() {
+        
+        
+        
+        
+        print(#function);
+    }
+    
+    @objc func registerWillClicked() {
+        print(#function);
+    }
 }

@@ -22,6 +22,7 @@ class PopoverPresentationController: UIPresentationController {
     // MARK: - 在将要出现的方法中修改尺寸
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
+        
         presentedView!.frame = CGRect(x: 100, y: 56, width: 200, height: 200);
         
         containerView?.insertSubview(masksView, at: 0);

@@ -9,16 +9,17 @@
 import UIKit
 
 // 1创建协议
-protocol VisitorViewDelegate {
+protocol VisitorViewDelegate : NSObjectProtocol {
     // 登陆
     func loginWillClicked();
     // 注册
     func registerWillClicked();
 }
 
-class VisitorView: UIView {
+class VisitorView: UIView, UITableViewDelegate {
     // 2设置代理人
-    var delegate: VisitorViewDelegate?;
+    weak var delegate: VisitorViewDelegate?;
+   
     
     // MARK: - 设置各个界面显示的状态
     func setupVisitorInfo(isHome: Bool, imageName: String, message: String) {

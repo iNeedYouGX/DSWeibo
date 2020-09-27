@@ -7,6 +7,20 @@
     {
       "filename" : "qrcode_border@2x.png",
       "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 51,
+          "left" : 51,
+          "right" : 50,
+          "top" : 50
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
       "scale" : "2x"
     },
     {

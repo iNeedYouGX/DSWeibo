@@ -21,6 +21,24 @@ class HomeTableViewController: BaseTableViewController {
         
         // 如果登陆了, 设置登陆之后的逻辑
         setUpNavgation();
+        
+        // 接受通知
+        NotificationCenter.default.addObserver(self, selector: #selector(change), name: NSNotification.Name(rawValue: NotifGXPopoverAnimatorShow), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(change), name: NSNotification.Name(NotifPopoverAnimatorDismiss), object: nil)
+    }
+    
+    // MARK: -  移除通知
+    deinit {
+        NotificationCenter.default.removeObserver(self);
+    }
+    
+    @objc func change(not: Notification) {
+        let btn = navigationItem.titleView as! UIButton;
+        
+        btn.isSelected = !btn.isSelected;
+        
+        
     }
     
     private func setUpNavgation() {
@@ -43,31 +61,35 @@ class HomeTableViewController: BaseTableViewController {
     
     @objc func rightItemClick()
     {
-        print(#function);
+        let sb = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let qrVc = sb.instantiateInitialViewController()
+        qrVc?.modalPresentationStyle = UIModalPresentationStyle.fullScreen;
+        present(qrVc!, animated: true, completion: nil)
     }
     
     @objc func titleBtnClick(btn: UIButton)
     {
-        btn.isSelected = !btn.isSelected;
+//        btn.isSelected = !btn.isSelected; 用了通知不要它了
        
         let sb = UIStoryboard(name: "PopoverViewController", bundle: nil);
         let popVc = sb.instantiateInitialViewController();
         
         // 用代理来改变模态形式
         popVc?.modalPresentationStyle = UIModalPresentationStyle.custom;
-        popVc?.transitioningDelegate = self;
+        
+        popVc?.transitioningDelegate = popAnimator
         
         present(popVc!, animated: true) {}
         print(popVc as Any);
     }
     
-}
-
-// MARK: - 利用代理来自定义弹出形式
-extension HomeTableViewController: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
-    {
-        return PopoverPresentationController(presentedViewController: presented, presenting: presenting)
-    }
+    
+    // MARK: - 需要一个强引用的属性
+    lazy var popAnimator: PopoverAnimator = {
+        let pop = PopoverAnimator()
+        return pop
+    }()
     
 }
+
+
